@@ -12,45 +12,30 @@
   <body id="body" class="body">
     <header>
       <div>
-        <h1 class="h1 text-center p-4">
-          Hola mundo<br />
-          ¡JavaScript!
-        </h1>
+        <h1 id="h1" class="h1 text-center p-4">¡Aprendiendo javaScript!</h1>
       </div>
-      <!--<div class="div-btn">
-        <div>
-          <button class="btn" onclick="myFunction()" id="demo">
-            Presionar
-          </button>
-      </div>-->
+
       <div class="container">
         <div class="row">
           <div class="d-flex justify-content-center">
-            <!--<div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label"
-              >Email address</label
+            <button
+              id="btnH1"
+              class="btn btn-primary p-2 m-2"
+              onclick="clickBtnH1()"
             >
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-            />
-            <div id="emailHelp" class="form-text">
-              We'll never share your email with anyone else.
-            </div>
-          </div>-->
+              H1 click
+            </button>
 
             <button
               id="btn1"
-              class="btn btn-primary p-2 m-2"
+              class="btn btn-outline-primary p-2 m-2"
               onclick="clickBtn()"
             >
               Pulsar
             </button>
             <button
               id="btn2"
-              class="btn btn-secondary p-2 m-2"
+              class="btn btn-outline-secondary p-2 m-2"
               onclick="clickBtn2()"
             >
               Background
@@ -58,35 +43,192 @@
 
             <button
               id="btn3"
-              class="btn btn-warning p-2 m-2"
+              class="btn btn-outline-warning p-2 m-2"
               onclick="limpiarHtml()"
             >
               Limpiar
             </button>
-            <!--<button id="btn4" class="button" onclick="dividir()">Dividir</button>
-        <div>
-          <p id="parrafo" class="texto"></p>
-        </div>-->
 
-            <!--<div class="mb-3 form-check">
-            <input
-              type="checkbox"
-              class="form-check-input"
-              id="exampleCheck1"
-            />
-            <label class="form-check-label" for="exampleCheck1"
-              >Check me out</label
+            <button
+              id="btn4"
+              class="btn btn-outline-info p-2 m-2"
+              onclick="crearNuevosElementos()"
             >
-          </div>-->
+              Crear
+            </button>
           </div>
-          <div id="divP" class="border shadow" onclick="divP()">
-            <p class="h2 text-center text-black p-4" id="parrafo-saludo"></p>
+          <div id="divP" class="border shadow mt-5">
+            <p id="parrafo-saludo" class="h2 text-center text-black p-4"></p>
+          </div>
+          <div id="divPNuevo" class="">
+            <p id="otro-parrafo" class="h2 text-center text-black p-4"></p>
+          </div>
+          <div>
+            <form name="myform" action=""></form>
+          </div>
+          <div class="mt-5">
+            <label for="exampleInputEmail1" class="form-label"></label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Escribe tú email"
+            />
+
+            <div>
+              <button
+                id="btnForm"
+                class="btn btn-success p-2 m-2"
+                onclick="enviarEmail()"
+              >
+                Enviar
+              </button>
+            </div>
+          </div>
+          <div id="divP2" class="border shadow mt-5 active">
+            <p id="parrafo2" class="h2 text-center text-black p-4"></p>
+          </div>
+          <div>
+            <button
+              id="btn6"
+              class="btn btn-warning p-2 mt-3"
+              onclick="pedirEdad()"
+            >
+              Obtener matricula
+            </button>
+            <div>
+              <div id="divNumeroParImpar" class="border shadow mt-5 active">
+                <p
+                  id="parrafoParImpar"
+                  class="h2 text-center text-black p-4"
+                ></p>
+              </div>
+              <label for="numeroParOImpar"></label>
+              <input
+                class="form-control"
+                id="numeroParOImpar"
+                type="number"
+                placeholder="Escribe un numero"
+              />
+              <button
+                id="btn7"
+                class="btn btn-info p-2 mt-3 mb-5"
+                onclick="numerosParImpar()"
+              >
+                Enviar numero
+              </button>
+            </div>
           </div>
         </div>
       </div>
+      <div class="div-caritas p-5">
+        <div>
+          <button class="btn btn-success" onclick="caritaFelizOn()">
+            feliz
+          </button>
+
+          <img
+            id="imagenes"
+            src="image/sad.png"
+            alt="carita feliz"
+            width="360px"
+          />
+
+          <button class="btn btn-success" onclick="caritaTristeOn()">
+            Triste
+          </button>
+        </div>
+      </div>
+      <div class="m-5">
+        <button
+          id="btn10"
+          class="btn btn-primary p-2 mt-3 mb-5"
+          onclick="nuevotexto()"
+        >
+          Nuevo texto
+        </button>
+        <button
+          id="btn11"
+          class="btn btn-outline-secondary p-2 mt-3 mb-5"
+          onclick="validarKeys()"
+        >
+          Contraseña
+        </button>
+        <button
+          id="btn12"
+          class="btn btn-outline-warning p-2 mt-3 mb-5"
+          onclick="calcularImpuestos()"
+        >
+          Impuestos
+        </button>
+        <button
+          id="btn13"
+          class="btn btn-outline-success p-2 mt-3 mb-5"
+          onclick="calcularMasaCorporal()"
+        >
+          BMI
+        </button>
+      </div>
     </header>
-    <script src="bootstrap-5/js/bootstrap.min.js"></script>
-    <script src="./main.js"></script>
-    <script src="./functions.js"></script>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <div class="divForm mb-5 border p-4 shadow">
+              <form class="form">
+                <div class="mb-3">
+                  <div class="h2Login text-center mb-3">
+                    <h2>Login:</h2>
+                  </div>
+                  <label for="InputEmail" class="form-label"
+                    >Dirección de email</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="InputEmail"
+                    aria-describedby="emailHelp"
+                  />
+                  <div id="emailHelp" class="form-text">
+                    <strong
+                      >Nunca compartiremos tu correo electrónico con
+                      nadie.</strong
+                    >
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="InputPassword" class="form-label">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="InputPassword"
+                  />
+                </div>
+                <div class="mb-3 form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label" for="exampleCheck1"
+                    >Check me out</label
+                  >
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container-fluid"></div>
+    </footer>
+    <script src="bootstrap-5.3/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+    <script src="functions.js"></script>
   </body>
 </html>
