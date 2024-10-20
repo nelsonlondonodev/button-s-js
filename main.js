@@ -34,12 +34,11 @@
 // //================= Crear nodos ===============================//
 
 // //================= Funcion para cambiar h1 =================================//
-document.addEventListener("click", (clickBtnH1) => {
+const functionH1 = document.addEventListener("click", () => {
   const mensajeCambioH1 = "Hola a todos, soy un h1";
   const eventofinalH1 = (document.querySelector("#h1").innerText =
     mensajeCambioH1);
   //(cambiarH1.innerText = mensajeCambioH1);
-
   setTimeout(() => {
     let removeChanges = document.lastModified;
     document.querySelector("#h1").innerText = removeChanges;
@@ -47,13 +46,16 @@ document.addEventListener("click", (clickBtnH1) => {
     //remove("mensajeCambioH1");
     //cambiarH1.remove();
   }, 3000);
+
   return;
 
   //document.getElementById("h1").reset("[]");
 });
 
+clickBtnH1();
+
 // //================= Función para crear elementos ==============//
-document.addEventListener("click", (clickBtn) => {
+const functionBtnPulsar = document.addEventListener("click", () => {
   let saludoPrompt = prompt("Hola, ¿Cúal es tú nombre?");
   const crearParrafo = document.querySelector("p");
 
