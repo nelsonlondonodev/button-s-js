@@ -1,7 +1,6 @@
 //================== LLamado por ID ==============//
 
 // const llamado = document.getElementById("btn1");
-// const crearParrafo = document.getElementById("parrafo-saludo");
 // const cambioBg = document.getElementById("btn2");
 // const cambioBgBody = document.getElementById("body");
 // const cambioBgBt = document.getElementById("btn2");
@@ -16,7 +15,7 @@
 
 // //================= Eventos =======================//
 
-// const eventoPromt = llamado.document.addEventListener("click", clickBtn);
+//
 // const eventoCbBg = cambioBg.document.addEventListener("click", clickBtn2);
 // const eventoEliminar = eliminar.document.addEventListener("click", limpiarHtml);
 // const eventoCrear = crearNuevoElemento.document.addEventListener(
@@ -35,7 +34,7 @@
 // //================= Crear nodos ===============================//
 
 // //================= Funcion para cambiar h1 =================================//
-document.addEventListener("click", () => {
+document.addEventListener("click", (clickBtnH1) => {
   const mensajeCambioH1 = "Hola a todos, soy un h1";
   const eventofinalH1 = (document.querySelector("#h1").innerText =
     mensajeCambioH1);
@@ -43,37 +42,38 @@ document.addEventListener("click", () => {
 
   setTimeout(() => {
     let removeChanges = document.lastModified;
-    document.querySelector("h1").innerText = removeChanges;
+    document.querySelector("#h1").innerText = removeChanges;
     //document.removeEventListener("click", clickBtnH1());
     //remove("mensajeCambioH1");
     //cambiarH1.remove();
   }, 3000);
+  return;
 
   //document.getElementById("h1").reset("[]");
 });
 
 // //================= Función para crear elementos ==============//
+document.addEventListener("click", (clickBtn) => {
+  let saludoPrompt = prompt("Hola, ¿Cúal es tú nombre?");
+  const crearParrafo = document.querySelector("p");
 
-// function clickBtn() {
-//   let saludoPrompt = prompt("Hola, ¿Cúal es tú nombre?");
+  if (saludoPrompt === "" || saludoPrompt === null) {
+    alert("No has introducido ningún nombre");
 
-//   if (saludoPrompt === "" || saludoPrompt === null) {
-//     alert("No has introducido ningún nombre");
+    return;
+  } else {
+    //============= Crear parrafo =============//
 
-//     return;
-//   } else {
-//     //============= Crear parrafo =============//
+    crearParrafo.innerText = saludoPrompt;
+  }
 
-//     crearParrafo.innerText = saludoPrompt;
-//   }
+  setTimeout(() => {
+    crearParrafo.innerText = `"Hola ${saludoPrompt}, preciona nuevamente el botón"`;
+  }, 3000);
+  return;
+});
 
-//   setTimeout(() => {
-//     crearParrafo.innerText = `"Hola ${saludoPrompt}, preciona nuevamente el botón"`;
-//   }, 3000);
-//   return;
-// }
-
-// clickBtn();
+clickBtn();
 
 // //================== Funcion para cambiar el background ===========//
 

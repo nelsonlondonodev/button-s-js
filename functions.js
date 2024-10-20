@@ -161,7 +161,7 @@ Escribir una función llamada bmi que reciba dos argumentos: peso y altura, y re
 
 // Nota: puedes asumir que el número inicial va a ser menor o igual que el número final.
 
-function sumarRango() {
+/*function sumarRango() {
   let minimo = Number(prompt("¿Escribe un numero?"));
   let maximo = Number(prompt("¿Escribe un numero?"));
   let suma = 0;
@@ -175,7 +175,8 @@ function sumarRango() {
       suma += i;
     }
     console.log(suma);
+    return;
   }
 }
 
-sumarRango();
+sumarRango();*/
